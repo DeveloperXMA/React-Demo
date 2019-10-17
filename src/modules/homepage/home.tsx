@@ -1,7 +1,10 @@
 import React from "react";
 import '../../shared/styles/home.scss';
 import ButtonAppBar from "../../shared/components/navBar/navBar";
-import { Container } from "@material-ui/core";
+import { Container, Box } from "@material-ui/core";
+import MyForm from '../FormCarousel';
+
+
 export default class HomePage extends React.Component {
 
   render() {
@@ -9,9 +12,9 @@ export default class HomePage extends React.Component {
       <div className="home-page">
         <Container>
           <ButtonAppBar />
-          <div className="main-body">
-            Hello
-          </div>
+          <Box className="main-body">
+            <MyForm />
+          </Box>
         </Container>
       </div>
     )
