@@ -7,8 +7,8 @@ import ButtonAppBar from './modules/NavBar';
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Container>
-      <ButtonAppBar/>
+      <Container className="main-container">
+        <ButtonAppBar/>
         <FullWidthTabs />
       </Container>
     </div>

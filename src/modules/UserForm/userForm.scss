@@ -1,0 +1,26 @@
+.travelers {
+  .prompt-text {
+    p:first-child {
+      margin-bottom: 0;
+    }
+    p + p {
+      margin-top: 0;
+    }
+  }
+}
+
+.popover-text {
+  padding: 16px;
+  max-width: 800px;
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.flex-align-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

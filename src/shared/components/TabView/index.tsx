@@ -8,6 +8,8 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import UserForm from '../../../modules/UserForm/travelTo';
 import TravelDates from '../../../modules/UserForm/travelDates';
+import Travelers from '../../../modules/UserForm/travelers';
+import TripCost from '../../../modules/UserForm/tripCost';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -74,7 +76,8 @@ export default function FullWidthTabs() {
         >
           <Tab label="Destination" {...a11yProps(0)} />
           <Tab label="Travel Dates" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          <Tab label="Travelers" {...a11yProps(2)} />
+          <Tab label="Trip Cost" {...a11yProps(3)} />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -89,7 +92,10 @@ export default function FullWidthTabs() {
           <TravelDates />
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          Item Three
+          <Travelers />
+        </TabPanel>
+        <TabPanel value={value} index={3} dir={theme.direction}>
+          <TripCost />
         </TabPanel>
       </SwipeableViews>
     </div>

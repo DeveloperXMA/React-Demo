@@ -79,8 +79,8 @@ export default function UserForm() {
         }}
       >
         <Typography className={classes.typography}>
-          <p>If traveling outside the United States, enter the country where travelers will be spending the most time.</p><p> If spending equal time in multiple countries, choose your first international destination.
-If taking a cruise, enter the first international port of arrival as your destination..</p></Typography>
+          If traveling outside the United States, enter the country where travelers will be spending the most time.<br />If spending equal time in multiple countries, choose your first international destination.
+If taking a cruise, enter the first international port of arrival as your destination..</Typography>
       </Popover>
       <TextField
           id="standard-full-width"
