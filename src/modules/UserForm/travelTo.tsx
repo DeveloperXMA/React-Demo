@@ -61,6 +61,7 @@ export default function UserForm() {
 
   return (
     <>
+      <h3>Where are you traveling?</h3>
       <Link href="#" className={classes.link} onClick={handleClick}>
         What if I am going to multiple destinations or on a cruise?
       </Link>

@@ -51,6 +51,7 @@ export default function MaterialUIPickers() {
 
   return (
     <>
+      <h3>When do you leave and return to your primary residence?</h3>
       <p>Travelers with different <Link href="#" className={classes.link} onClick={handleClick}>
         Travel dates
       </Link> must buy separate plans</p>

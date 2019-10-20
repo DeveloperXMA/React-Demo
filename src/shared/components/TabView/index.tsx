@@ -10,6 +10,7 @@ import UserForm from '../../../modules/UserForm/travelTo';
 import TravelDates from '../../../modules/UserForm/travelDates';
 import Travelers from '../../../modules/UserForm/travelers';
 import TripCost from '../../../modules/UserForm/tripCost';
+import TripType from '../../../modules/UserForm/tripType';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -72,12 +73,13 @@ export default function FullWidthTabs() {
           indicatorColor="primary"
           textColor="primary"
           variant="fullWidth"
-          aria-label="full width tabs example"
+          aria-label="Trip info"
         >
           <Tab label="Destination" {...a11yProps(0)} />
           <Tab label="Travel Dates" {...a11yProps(1)} />
           <Tab label="Travelers" {...a11yProps(2)} />
           <Tab label="Trip Cost" {...a11yProps(3)} />
+          <Tab label="Other" {...a11yProps(4)} />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -96,6 +98,9 @@ export default function FullWidthTabs() {
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>
           <TripCost />
+        </TabPanel>
+        <TabPanel value={value} index={4} dir={theme.direction}>
+          <TripType />
         </TabPanel>
       </SwipeableViews>
     </div>

@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     title: {
       flexGrow: 1,
+      color: '#00355f'
     },
     transparent: {
       backgroundColor: '#fc0'
@@ -36,7 +37,7 @@ export default function ButtonAppBar() {
           <Typography variant="h6" className={classes.title}>
             Insure my trip
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button className="expedia-blue">Login</Button>
         </Toolbar>
       </Container>
       </AppBar>
