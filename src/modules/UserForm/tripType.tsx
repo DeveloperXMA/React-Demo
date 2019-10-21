@@ -7,6 +7,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Grid, createStyles, Theme } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
   card: {
@@ -18,6 +19,11 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
   },
   button: {
     margin: theme.spacing(1),
+    marginTop: '50px'
+  },
+  btnLink: {
+    color: '#fff',
+    textDecoration: 'none'
   }
 }));
 
@@ -118,9 +124,9 @@ export default function TripType() {
           </Card>
         </Grid>
       </Grid>
-      <Button variant="contained" color="primary" className={classes.button}>
-        Check my Quote
-      </Button>
+        <Button variant="contained" color="primary" className={classes.button}>
+          <Link to="/searchResults" className={classes.btnLink}>SEE PLANS & PRICES</Link>
+        </Button>
     </>
   );
 }
