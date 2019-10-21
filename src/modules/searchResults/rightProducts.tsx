@@ -27,8 +27,29 @@ export default class Products extends React.Component {
             benefits={["asdasd", "sifojasoifjaoisdj"]}
           />
         </Grid>
-        <Grid item>
-          Hello
+        <Grid item className="product-item">
+          <ProductItem
+              price='$18.00'
+              imageUrl='https://cdn.insuremytrip.com/resources/14342/bhtp_logo-1.svg'
+              planName='ExactCare'
+              planLevel='STRONG VALUE'
+              rating={3.5}
+              recommendedRate={97}
+              planReviews={980}
+              benefits={["asdasd", "sifojasoifjaoisdj"]}
+          />
+        </Grid>
+        <Grid item className="product-item">
+          <ProductItem
+              price='$14.00'
+              imageUrl='https://cdn.insuremytrip.com/resources/14342/bhtp_logo-1.svg'
+              planName='ExactCare Value'
+              planLevel='ECONOMY'
+              rating={4}
+              recommendedRate={96}
+              planReviews={137}
+              benefits={["asdasd", "sifojasoifjaoisdj"]}
+          />
         </Grid>
       </Grid>
     )

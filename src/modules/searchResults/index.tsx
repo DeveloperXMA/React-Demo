@@ -13,7 +13,7 @@ export default class SearchResults extends React.Component<{}, myState> {
   constructor(props:any) {
     super(props);
     this.state = {
-      isFinishLoading: true
+      isFinishLoading: false
     }
 
     setTimeout(()=> {
@@ -47,10 +47,10 @@ export default class SearchResults extends React.Component<{}, myState> {
       <Container className="search-results expedia-blue" maxWidth="lg">
         <div className="heading">We found theses plans</div>
         <Grid container spacing={3}>
-          <Grid item xs={3}>
+          <Grid item md={3}>
             <LeftNav />
           </Grid>
-          <Grid item xs={9}>
+          <Grid item md={9}>
             <Products />
           </Grid>
         </Grid>
