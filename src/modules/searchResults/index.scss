@@ -14,5 +14,29 @@
     .overlay-div {
       height: 100%;
     }
+}
 
+.search-results {
+  .heading {
+    text-align: left;
+    padding: 20px;
+    font-size: 1.5rem;
+  }
+  .left-nav-bar {
+    background: #f9f9f9;
+    padding: 10px 20px;
+  }
+  .product-item {
+    width: 100%;
+    height: 100%;
+    color: #333;
+    padding: 0 25px;
+    position: relative;
+    border: 1px solid #ddd;
+    border-top: none;
+    background-color: white;
+    &:hover {
+      background-color: #ebebeb;
+    }
+  }
 }
