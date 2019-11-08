@@ -11,12 +11,14 @@ import TravelDates from '../../../modules/UserForm/travelDates';
 import Travelers from '../../../modules/UserForm/travelers';
 import TripCost from '../../../modules/UserForm/tripCost';
 import TripType from '../../../modules/UserForm/tripType';
+import Button from '@material-ui/core/Button';
 
 interface TabPanelProps {
   children?: React.ReactNode;
   dir?: string;
   index: any;
   value: any;
+  currentIndex?: any;
 }
 
 function TabPanel(props: TabPanelProps) {
@@ -48,6 +50,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   root: {
     backgroundColor: theme.palette.background.paper,
     marginTop: '100px'
+  },
+  button: {
+    margin: theme.spacing(1),
   }
 }));
 
@@ -55,14 +60,22 @@ export default function FullWidthTabs() {
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
+  const [currentIndex, setCurrentIndex] = React.useState(0);
 
   const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
     setValue(newValue);
+    setCurrentIndex(newValue);
   };
 
   const handleChangeIndex = (index: number) => {
     setValue(index);
+    setCurrentIndex(index);
   };
+
+  const clickHandler = ():any => {
+    setCurrentIndex((currentIndex + 1) % 5);
+    setValue((currentIndex + 1) % 5);
+  }
 
   return (
     <div className={classes.root}>
@@ -103,6 +116,7 @@ export default function FullWidthTabs() {
           <TripType />
         </TabPanel>
       </SwipeableViews>
+      {(currentIndex !== 4) && <Button variant="contained" color="primary" component="span" className={classes.button} onClick={clickHandler}>Next</Button>}
     </div>
   );
 }
